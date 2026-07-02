@@ -8,7 +8,7 @@
 .navbar {
     width: 100%;
     height: 80px;
-    background: #0f172a;
+    background: #080e1b;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +17,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
+
 }
 
 
@@ -26,10 +27,12 @@
 }
 
 .logo img {
+    background-color: #0f172a;
     width: 170px;
     height: auto;
     cursor: pointer;
     display: block; 
+    border-radius: 50px;
 }
 
 
