@@ -1,0 +1,51 @@
+:root {
+  /* Color tokens */
+  --color-bg: #0F172A;
+  --color-bg-alt: #0B1220;
+  --color-card: #1E293B;
+  --color-card-hover: #263449;
+  --color-primary: #8B5CF6;
+  --color-accent: #06B6D4;
+  --color-text: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-border: rgba(248, 250, 252, 0.08);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
+  --gradient-glow: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(6, 182, 212, 0) 70%);
+  --gradient-radial-fade: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.12) 0%, rgba(15, 23, 42, 0) 60%);
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Type scale */
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 2.75rem;
+  --fs-3xl: 3.75rem;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Radii & shadows */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --shadow-glow: 0 8px 30px rgba(139, 92, 246, 0.15);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.25);
+
+  /* Layout */
+  --max-width: 1200px;
+  --transition: 0.3s ease;
+}

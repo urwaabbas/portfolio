@@ -1,0 +1,46 @@
+.about-section {
+  padding: 80px 20px;
+  background-color: #0d1117; /* Matching your dark background */
+  color: #fff;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  color: #fff;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #8a4fff; /* Purple accent */
+  margin: 10px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #8a4fff;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #c9d1d9;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.about-text strong {
+  color: #8a4fff;
+}
