@@ -1,0 +1,192 @@
+.contact-section {
+  /* Increased top/bottom padding to give it breathing room */
+  padding: 140px 20px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 85vh; /* Forces the section to take up a substantial height on large screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers everything beautifully vertically */
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-subtitle {
+  color: #8b5cf6;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.contact-title {
+  font-size: 2.8rem; /* Slightly larger to match your other main headers */
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Container Split Setup */
+.contact-container {
+  display: flex;
+  gap: 50px;
+  align-items: stretch; /* Forces both left and right sides to be the exact same height */
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+/* --- Left Side: Contact Info Cards --- */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* More spacing between cards */
+  width: 100%;
+}
+
+.info-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 28px 24px; /* Tallened the inside padding */
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1; /* Automatically stretches cards to fill the vertical space equally */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateX(6px);
+  border-color: #8b5cf6;
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1);
+}
+
+.info-icon {
+  font-size: 1.8rem;
+  background: rgba(139, 92, 246, 0.1);
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a78bfa;
+}
+
+.info-details h3 {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-details p, 
+.info-details a {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* --- Right Side: Form Block --- */
+.contact-form-wrapper {
+  flex: 1.4;
+  width: 100%;
+}
+
+.contact-form {
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 45px 40px; /* Enhanced internal breathing space */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%; /* Spans full aligned height */
+  box-sizing: border-box;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 18px; /* Slightly thicker, premium-feeling input bars */
+  background: #0b0f19;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.25);
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+/* CTA Submit Button */
+.submit-btn {
+  background: #8b5cf6;
+  color: #ffffff;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-top: auto; /* Pushes button neatly to the bottom of the form block */
+}
+
+.submit-btn:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
+}
+
+
+.email-link {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Turns the email purple when the user hovers over it */
+.email-link:hover {
+  color: #a78bfa; 
+  text-decoration: underline;
+}
+
+.location-link {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.4;
+}
+
+/* Turns the address purple and reveals an underline on hover */
+.location-link:hover {
+  color: #a78bfa;
+  text-decoration: underline;
+}

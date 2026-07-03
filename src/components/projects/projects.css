@@ -1,0 +1,134 @@
+/* Container section styling */
+.project-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #0b0f19; /* Deep dark background matching your theme */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+/* 1. Grid layout config */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+/* 2. Individual project card layout */
+.projects-card {
+  background: #111827; /* Slightly lighter dark shade for contrast */
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Clean lift and subtle purple glow on hover */
+.projects-card:hover {
+  transform: translateY(-6px);
+  border-color: #8b5cf6; /* Your purple accent color */
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+}
+
+/* 3. Responsive Image constraints */
+.project-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid #1f2937;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.projects-card:hover .project-img {
+  transform: scale(1.03); /* Subtle image zoom interaction */
+}
+
+/* 4. Text content layout wrapper */
+.project-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Pushes content down equally */
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.project-description {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Makes descriptions of uneven length align buttons perfectly */
+}
+
+/* 5. Technology Badges styling */
+.projects-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tech-tag {
+  background: rgba(139, 92, 246, 0.1); /* Transparent tint of your purple signature color */
+  color: #a78bfa;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* 6. Action Button configuration */
+.projects-link {
+  display: flex;
+  margin-top: auto; /* Aligns button neatly to the bottom boundary */
+}
+
+.btn-live {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #8b5cf6;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn-live:hover {
+  background: #7c3aed;
+}
