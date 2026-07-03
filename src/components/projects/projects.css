@@ -1,10 +1,10 @@
-/* Container section styling */
+
 .project-section {
   padding: 80px 20px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  background-color: #0b0f19; /* Deep dark background matching your theme */
+  background-color: #0b0f19; 
 }
 
 .section-title {
@@ -21,7 +21,7 @@
   margin-bottom: 50px;
 }
 
-/* 1. Grid layout config */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -29,9 +29,8 @@
   padding: 10px;
 }
 
-/* 2. Individual project card layout */
 .projects-card {
-  background: #111827; /* Slightly lighter dark shade for contrast */
+  background: #111827;
   border: 1px solid #1f2937;
   border-radius: 16px;
   overflow: hidden;
@@ -42,14 +41,14 @@
   text-align: left;
 }
 
-/* Clean lift and subtle purple glow on hover */
+
 .projects-card:hover {
   transform: translateY(-6px);
-  border-color: #8b5cf6; /* Your purple accent color */
+  border-color: #8b5cf6; 
   box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
 }
 
-/* 3. Responsive Image constraints */
+
 .project-image-wrapper {
   width: 100%;
   height: 200px;
@@ -65,15 +64,15 @@
 }
 
 .projects-card:hover .project-img {
-  transform: scale(1.03); /* Subtle image zoom interaction */
+  transform: scale(1.03); 
 }
 
-/* 4. Text content layout wrapper */
+
 .project-content {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Pushes content down equally */
+  flex-grow: 1; /
 }
 
 .project-title {
@@ -88,10 +87,10 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  flex-grow: 1; /* Makes descriptions of uneven length align buttons perfectly */
+  flex-grow: 1; 
 }
 
-/* 5. Technology Badges styling */
+
 .projects-tag {
   display: flex;
   flex-wrap: wrap;
@@ -100,7 +99,7 @@
 }
 
 .tech-tag {
-  background: rgba(139, 92, 246, 0.1); /* Transparent tint of your purple signature color */
+  background: rgba(139, 92, 246, 0.1); 
   color: #a78bfa;
   padding: 5px 12px;
   border-radius: 20px;
@@ -109,10 +108,10 @@
   border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
-/* 6. Action Button configuration */
+
 .projects-link {
   display: flex;
-  margin-top: auto; /* Aligns button neatly to the bottom boundary */
+  margin-top: auto; 
 }
 
 .btn-live {
