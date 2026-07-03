@@ -242,3 +242,24 @@
     text-decoration: none;
   }
 }
+
+/* Styling for the Desktop Resume Button */
+.desktop-resume-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid #6c5ce7; /* Elegant purple border matching your active UI */
+  border-radius: 6px;
+  color: #6c5ce7;            /* Text color matches the border */
+  font-weight: 600;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect to make it interactive */
+.desktop-resume-btn:hover {
+  background-color: #6c5ce7; /* Fills up with purple on hover */
+  color: #ffffff;            /* Text turns white */
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.5); /* Soft neon glow */
+  transform: translateY(-1px);
+}

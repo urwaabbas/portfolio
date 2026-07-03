@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../../assets/logo-urwa-abbas.png";
 import linkedinLogo from "../../assets/linked-in-logo.png";
 import githubLogo from "../../assets/git-hub-logo.png";
+import resumePdf from "../../assets/URWA_ABBAS_CV.pdf";
 import "./nav.css";
 
 const Navbar = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* The main links container */}
+      {/* Navigation Links & Mobile Sidebar */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li><a href="#home" onClick={closeMenu}>Home</a></li>
         <li><a href="#about" onClick={closeMenu}>About</a></li>
@@ -26,7 +27,13 @@ const Navbar = () => {
         <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
         <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         
-        {/* Added: These will only show up inside the mobile tray view */}
+        {/* Mobile Resume Button (Visible only on mobile/tablet screens) */}
+        <li className="mobile-resume-li">
+          <a href={resumePdf} download="URWA_ABBAS_CV.pdf" onClick={closeMenu} className="mobile-resume-btn">
+            Resume
+          </a>
+        </li>
+        
         <li className="mobile-socials-row">
           <a href="https://www.linkedin.com/in/urwah-abbas-ahssan-6a90563b2/" target="_blank" rel="noopener noreferrer">
             <img src={linkedinLogo} alt="LinkedIn" />
@@ -40,7 +47,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* This remains perfect for Desktop laptops */}
+      {/* Desktop Layout Actions (Hidden on mobile via CSS) */}
       <div className="nav-actions">
         <div className="nav-socials">
           <a href="https://www.linkedin.com/in/urwah-abbas-ahssan-6a90563b2/" target="_blank" rel="noopener noreferrer" className="nav-social-icon" title="LinkedIn">
@@ -55,7 +62,9 @@ const Navbar = () => {
         </div>
 
         <div className="nav-btn">
-          <button>Resume</button>
+          <a href={resumePdf} download="URWA_ABBAS_CV.pdf" className="desktop-resume-btn">
+            Resume
+          </a>
         </div>
       </div>
     </nav>
