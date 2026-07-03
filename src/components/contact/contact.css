@@ -190,3 +190,113 @@
   color: #a78bfa;
   text-decoration: underline;
 }
+
+html {
+  font-size: 16px;
+}
+
+.desktop-resume-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid #6c5ce7;
+  border-radius: 6px;
+  color: #6c5ce7;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.desktop-resume-btn:hover {
+  background-color: #6c5ce7;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+  transform: translateY(-1px);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #6c5ce7;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.mobile-resume-li {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-resume-li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .mobile-resume-btn {
+    display: inline-block;
+    width: 80%;
+    padding: 12px;
+    background-color: #6c5ce7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
