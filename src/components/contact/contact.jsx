@@ -9,16 +9,51 @@ const Contact = () => {
     message: "",
   });
 
+  // NEW: Track loading states and display direct API response messages to your layout
+  const [status, setStatus] = useState({ loading: false, success: null, error: null });
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  // MODIFIED: Asynchronous submission logic connected directly to your backend
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus({ loading: true, success: null, error: null });
 
-    console.log("Form Data Submitted:", formData);
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({
+          loading: false,
+          success: "🎉 Message sent and stored successfully!",
+          error: null,
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" }); // Reset layout fields
+      } else {
+        setStatus({
+          loading: false,
+          success: null,
+          error: data.message || "Failed to submit request.",
+        });
+      }
+    } catch (err) {
+      // Handles cases where your server drops or local database buffering blocks the request loop
+      setStatus({
+        loading: false,
+        success: null,
+        error: "Unable to reach the backend server right now.",
+      });
+    }
   };
 
   return (
@@ -34,10 +69,7 @@ const Contact = () => {
             <div className="info-icon">✉️</div>
             <div className="info-details">
               <h3>Email</h3>
-              <a
-                href="mailto:urwaabbas.buzdar@gmail.com"
-                className="email-link"
-              >
+              <a href="mailto:urwaabbas.buzdar@gmail.com" className="email-link">
                 urwaabbas.buzdar@gmail.com
               </a>
             </div>
@@ -46,7 +78,6 @@ const Contact = () => {
             <div className="info-icon">📍</div>
             <div className="info-details">
               <h3>Location</h3>
-              
               <a
                 href="https://maps.google.com/?cid=1065096444560413936"
                 target="_blank"
@@ -113,9 +144,14 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-btn">
-              Send Message
+            {/* MODIFIED: Updates button behavior visually when communication takes place */}
+            <button type="submit" className="submit-btn" disabled={status.loading}>
+              {status.loading ? "Sending..." : "Send Message"}
             </button>
+
+            {/* NEW: Displays structural success or error strings in line inside the layout wrapper */}
+            {status.success && <p className="status-success-text" style={{ color: "green", marginTop: "10px" }}>{status.success}</p>}
+            {status.error && <p className="status-error-text" style={{ color: "red", marginTop: "10px" }}>{status.error}</p>}
           </form>
         </div>
       </div>

@@ -6,19 +6,21 @@ import Skills from "./components/skills/skills";
 import Projects from "./components/projects/projects";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
+import Auth from "./components/auth/auth";
 
 const App = () => {
-  return(
+  return (
     <>
-    <Navbar/>
-    <Hero/>
-    <About/>
-    <Skills/>
-    <Projects/>
-    <Contact/>
-    <Footer/>
+      <Navbar />
+      <Hero />
+      <About />
+      <Auth /> 
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
 export default App;
